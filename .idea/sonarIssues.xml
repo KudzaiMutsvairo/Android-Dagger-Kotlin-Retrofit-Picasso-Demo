@@ -113,6 +113,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../farm-app/app/src/main/java/com/fanset/murimi247/api/data/repositories/data/DataRepositoryImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>

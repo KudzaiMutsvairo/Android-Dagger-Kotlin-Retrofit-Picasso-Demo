@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kudzai.mutswairo.daggerkotlinpractice1.R
 import com.kudzai.mutswairo.daggerkotlinpractice1.model.Response
@@ -29,11 +30,13 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView() {
         recyclerview.layoutManager = LinearLayoutManager(this)
         recyclerview.adapter = RecyclerViewAdapter()
+        val decoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        recyclerview.addItemDecoration(decoration)
         recyclerview.adapter = recyclerViewAdapter
     }
 
     private fun initViewModel(){
-        //we use a view model provider to initialize our view model
+
         mainViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
         mainViewModel.getLiveDataObservable().observe(this
         ) { t ->
@@ -45,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                     .show()
             }
         }
-        mainViewModel.makeApicall()
+        mainViewModel.makeApiCall()
+        //mainViewModel.makeApicall()
     }
 }
