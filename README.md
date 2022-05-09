@@ -1,4 +1,4 @@
-Android Dagger Kotlin Retrofit Glide Demo App
+<h1>Android Dagger Kotlin Retrofit Glide Demo App</h1>
 
 The primary purpose of this application is for practice and Demonstration of Android Software Engineering concepts and frameworks.
 <a href="https://square.github.io/retrofit/"><h2>Retrofit</h2></a>
